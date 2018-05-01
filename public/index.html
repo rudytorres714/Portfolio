@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/rudy.jpg"/>
+  <title>Rudy Torres</title>
+  <link rel="stylesheet" href="css/gradient.min.css" id="css-main">
+  <script src="https://use.fontawesome.com/e65fc10c49.js"></script>
+
+  <style>
+    .palette-wrapper {
+      background-color: #fff;
+      border: 2px solid #39b54a;
+      border-left: 0px;
+      left: 0px;
+      padding: 15px;
+      position: fixed;
+      top: 200px;
+      -webkit-transition: margin 0.2s linear;
+      -moz-transition: margin 0.2s linear;
+      -o-transition: margin 0.2s linear;
+      transition: margin 0.2s linear;
+      width: 180px;
+      z-index: 999999
+    }
+
+    .palette-wrapper select {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%
+    }
+
+    .palette-closed {
+      margin-left: -180px
+    }
+
+    h2.palette-title,
+    .block-content h3.palette-title {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0px 0px 10px 0px;
+      padding-bottom: 5px;
+      text-transform: uppercase
+    }
+
+    .palette-colors {
+      margin: 0px;
+      padding: 0px
+    }
+
+    .palette-colors li {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      display: block;
+      float: left;
+      list-style: none;
+      margin-bottom: 11px;
+      margin-right: 11px
+    }
+
+    .palette-colors li:nth-child(4n) {
+      margin-right: 0px
+    }
+
+    .palette-colors a {
+      background-color: red;
+      display: block;
+      height: 24px;
+      margin: 1px;
+      width: 24px
+    }
+
+    .palette-toggle {
+      background-color: black;
+      border: 2px solid black;
+      border-left: 0px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1;
+      position: absolute;
+      right: -42px;
+      text-align: center;
+      text-transform: uppercase;
+      top: -2px;
+      width: 40px
+    }
+
+    .palette-toggle .palette-toggle-inner {
+      border: 1px solid #fff;
+      height: 100px;
+      padding: 66px 0px 0px 0px
+    }
+
+    .palette-toggle span {
+      display: block;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      white-space: nowrap
+    }
+
+    .palette-toggle i {
+      display: inline;
+      margin-right: 8px
+    }
+
+    .palette-color-green a {
+      background-color: #07cb79;
+    }
+
+    .palette-color-red a {
+      background-color: #e83b35;
+    }
+
+    .palette-color-cyan a {
+      background-color: #07aaf5;
+    }
+
+    .palette-color-purple a {
+      background-color: #8e45ae;
+    }
+    .palette-color-gradient a {
+      background-image: linear-gradient(to right, rgb(255, 195, 113) 0%, rgb(255, 95, 109) 100%);
+    }
+    .github-btn {
+      margin-bottom: -15%;
+    }
+    .filter-btns .nav-pills li a:hover {
+      animation: unset;
+      color: #f5a623;
+      border-bottom: 2px solid #f5a623;
+    }
+    .preventSpam  {
+      display: none;
+    }
+      #thankyou_message {
+          display: none;
+          text-align: center;
+          padding-top: 20px;
+          padding-bottom: 30px;
+      }
+  </style>
+
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+      <!-- preloader -->
+      <div id="preloader">
+        <div class="sk-wave">
+          <div class="sk-rect sk-rect1"></div>
+          <div class="sk-rect sk-rect2"></div>
+          <div class="sk-rect sk-rect3"></div>
+          <div class="sk-rect sk-rect4"></div>
+          <div class="sk-rect sk-rect5"></div>
+        </div>
+      </div>
+      <!-- preloader end -->
+      <header class="container-fluid sdm-bg" id="home">
+        <div class="row">
+          <div class="overlay"></div>
+          <!-- main menu -->
+          <ul class="nav nav-pills menu-center margin-top-30 scroll-nav">
+            <li role="presentation" class="active"><a href="#home"><i class="fa fa-home"></i></a></li>
+            <li role="presentation"><a href="#portfolio">Portfolio</a></li>
+            <li role="presentation"><a href="#reviews">Certifications</a></li>
+            <li role="presentation"><a href="#about_me">About</a></li>
+            <li role="presentation"><a href="#expertness">Services</a></li>
+            <li role="presentation"><a href="#contact_me">Contact</a></li>
+          </ul>
+          <!-- main menu end -->
+          <img src="images/rudy.jpg" class="margin-top-76 img-circle center-block profile_picture" alt="profile picture">
+          <h1 class="text-capitalize text-center">Rudy Torres</h1>
+          <h3 class="text-capitalize text-center">Front End Web & Mobile Developer</h3>
+          <hr/>
+          <div class="text-center margin-bottom-135">
+            <ul class="social-networks spin-icon">
+              <li><a href="https://www.facebook.com/masters189" class="icon-facebook" target="_blank">Facebook</a></li>
+              <li><a href="https://twitter.com/rtorres_dev" class="icon-twitter" target="_blank">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/in/rudy-torres/" class="icon-linkedin" target="_blank">LinkedIn</a></li>
+              <li><a href="https://www.pinterest.com/torres_dev/" class="icon-pinterest" target="_blank">Pinterest</a></li>
+              <li><a href="https://www.instagram.com/torresr714/" class="icon-instagram" target="_blank">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section class="container position-relative" id="portfolio">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 position-absolute">
+            <div class="text-center filter-btns">
+              <!-- filter btn -->
+              <ul class="nav nav-pills">
+                <li role="presentation">
+                  <a href="javascript:void(0)" id="all" class="btn" data-mixitup-control data-filter="all">All</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".web">Web</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".mobile">Mobile</a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:void(0)" class="btn" data-mixitup-control data-filter=".desktop">Desktop</a>
+                </li>
+              </ul>
+              <!-- filter btn end-->
+            </div>
+            <!-- mixitup container -->
+            <div class="row" id="mix-wrapper">
+              <div id="effect-5">
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web mobile" data-order="1">
+                  <figure>
+                    <img src="images/portfolio/rejamLG.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#rejamModal">
+                        <h3>ReJam Web Application</h3>
+                        <hr>                      
+                        <p>Front End Developer, Group Project Development at UC Irvine</p> <br>
+                          <h5>Click for more details</h5>
+
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web mobile" data-order="2">
+                  <figure>
+                    <img src="images/portfolio/hhLG.jpg" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#helpinghandModal">
+                        <h3>Helping Hand Web & Mobile App</h3>
+                        <hr>
+                        <p>Front End Developer, Group Project Development at UC Irvine</p> <br>
+                          <h5>Click for more details</h5>
+
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web desktop" data-order="3">
+                  <figure>
+                    <img src="images/portfolio/crystal.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#crystalModal">
+                        <h3>Crystal Web App Game</h3>
+                        <hr> 
+                        <p>Developer, Designed for assignment at UC Irvine</p> <br>
+                          <h5>Click for more details</h5>
+
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web desktop" data-order="4">
+                  <figure target="_blank">
+                    <img src="images/portfolio/psychicLG.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#psychicModal">
+                        <h3>Psychic Web App Game</h3>
+                        <hr>
+                        <p>Developer, Designed for assignment at UC Irvine</p><br>
+                          <h5>Click for more details</h5>
+
+                      </a>                      
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web mobile" data-order="5">
+                  <figure>
+                    <img src="images/portfolio/vpsmall.png" alt="">
+                    <figcaption>
+                      <a href="#" class="porto" data-toggle="modal" data-target="#vpModal">
+                        <h3>Vacation Photowall Web & Mobile App </h3>
+                        <hr> 
+                        <p>Developer, Family vacation photowall built in React</p><br>
+                          <h5>Click for more details</h5>
+
+                      </a>
+
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 mix-target web desktop" data-order="6">
+                  <figure>
+                    <img src="images/portfolio/music-triviaLG.png" alt="">
+                    <figcaption>
+                      <a href="#" data-toggle="modal" data-target="#musicModal">
+                        <h3>Music Trivia Web App</h3>
+                        <hr> 
+                        <p>Developer , Designed for assignment at UC Irvine</p><br>
+                          <h5>Click for more details</h5>
+
+                      </a>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="col-sm-12 text-center">
+
+                <a href="https://github.com/rudytorres714" target="_blank" class="btn btn-orange github-btn">GitHub Projects</a>
+              </div>
+
+            </div>
+            <!-- mixitup container end -->
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="reviews">
+        <div class="row">
+          <div class="overlay"></div>
+          <!-- testimonials slider -->
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12" data-wow-delay="0.2s">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                  <!-- Bottom Carousel Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive" src="images/uci-logo.jpg" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="images/networkplus-logo.gif" alt="">
+                    </li>
+                    <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="images/CompTIA-A-plus-logo.jpg" alt="">
+                    </li>
+                      <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="images/NCTI%20Logo.jpg" alt="">
+                      </li>
+                      <li data-target="#quote-carousel" data-slide-to="4"><img class="img-responsive" src="images/NCTI%20Logo.jpg" alt="">
+                      </li>
+                      <li data-target="#quote-carousel" data-slide-to="5"><img class="img-responsive" src="images/NCTI%20Logo.jpg" alt="">
+                      </li>
+                      <li data-target="#quote-carousel" data-slide-to="6"><img class="img-responsive" src="images/NCTI%20Logo.jpg" alt="">
+                      </li>
+                      <li data-target="#quote-carousel" data-slide-to="7"><img class="img-responsive" src="images/NCTI%20Logo.jpg" alt="">
+                      </li>
+                  </ol>
+
+                  <!-- Carousel Slides / Quotes -->
+                  <div class="carousel-inner text-center">
+
+                    <div class="item active">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+
+                            <div data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="images/uci.png" alt="UC Irvine Certificate">
+                            </div>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                    <div class="item">
+                      <blockquote>
+                        <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2">
+                              <div data-target="#quote-carousel" data-slide-to="1" class="active"><img class="img-responsive " src="images/CompNetwork.png" alt="CompTIA Network+ Certificate">
+                              </div>
+                          </div>
+                        </div>
+                      </blockquote>
+                    </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="2" class="active"><img class="img-responsive " src="images/CompA.png" alt="CompTIA A+ Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="3" class="active"><img class="img-responsive " src="images/IntroNetwork.png" alt="NCI Into Networking Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="4" class="active"><img class="img-responsive " src="images/TAS.png" alt="NCI Troubleshooting Advance Services Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="5" class="active"><img class="img-responsive " src="images/InstallTech.png" alt="NCTI Installation Technician Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="6" class="active"><img class="img-responsive " src="images/ComputerBB.png" alt="NCTI Computer and Broadband Modems Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                      <div class="item">
+                          <blockquote>
+                              <div class="row">
+                                  <div class="col-sm-8 col-sm-offset-2">
+                                      <div data-target="#quote-carousel" data-slide-to="7" class="active"><img class="img-responsive " src="images/ReturnPath.png" alt="NCTI Return Path Operations Certificate">
+                                      </div>
+                                  </div>
+                              </div>
+                          </blockquote>
+                      </div>
+                  </div>
+
+                  <!-- Carousel Buttons Next/Prev -->
+                  <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-angle-left fa-2x"></i></a>
+                  <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-angle-right fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- testimonials slider end -->
+        </div>
+      </section>
+      <section class="container" id="about_me">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-12">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h3><i class="fa fa-user"></i>About me</h3>
+                <div class="block">
+                  <p>
+                    I love what I do. There is something about technology that connects people in a way that nothing else can.
+                    It has the ability to change lives and that is something I'm very proud to be apart of. I was introduced
+                    to web development in 2016 and the rest is history. One of the things I love most about
+                    programming is the continuous learning required for this fast-paced environment. My ability to stay current
+                    on programming languages and design trends means I remain invaluable and help my clients reach their goals faster.
+                  </p>
+                  <p>
+                    I can take ideas and turn them into functional web and mobile responsive applications. Have an elegantly designed website up and running in
+                    months. There is nothing more professionally gratifying than hearing, "Great job, you nailed it."
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <h3><i class="fa fa-building"></i>Work history</h3>
+                <div class="block">
+                  <h4>Operations Manager</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> Randy's Management</li>
+                    <li><i class="fa fa-clock-o"></i> 2016-2017</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4> Field Service Tech</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> Spectrum</li>
+                    <li><i class="fa fa-clock-o"></i> 2011-2016</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Crew Worker</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-building"></i> C&J Energy</li>
+                    <li><i class="fa fa-clock-o"></i> 2007-2009</li>
+                  </ul>
+                </div> 
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+                <div class="block">
+                  <h4>Computer Software Engineering</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> UC Irvine</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-2018</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Web Development</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> LearningFuze</li>
+                    <li><i class="fa fa-clock-o"></i> 2017-2017</li>
+                  </ul>
+                </div> 
+                <div class="block">
+                  <h4>Networking & Telecommunications</h4>
+                  <ul class="icon-list">
+                    <li><i class="fa fa-book"></i> Coastline College</li>
+                    <li><i class="fa fa-clock-o"></i> 2009-2011</li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="col-sm-6 text-center">
+                <a href="Rudy@Torres-Dev.pdf"  download class="btn btn-orange">Download Resume</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="expertness">
+        <div class="row">
+          <div class="overlay"></div>
+          <div class="col-sm-12">
+            <h3 class="text-center"><i class="fa fa-bookmark"></i>What I Do</h3>
+          </div>
+        </div>
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-android fa-3x"></i>
+                <h4 class="text-uppercase">Mobile Apps</h4>
+                <p>
+                  Build mobile applications with React and React-Native using Xcode & Expo XDE.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-code fa-3x"></i>
+                <h4 class="text-uppercase">web development</h4>
+                <p>
+                  Create functional web applications and websites based on your needs with a strong focus in front end development frameworks.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <div class="block">
+                <i class="fa fa-magic fa-3x"></i>
+                <h4 class="text-uppercase">UX/UI Design</h4>
+                <p>
+                  Good design matters, let my team and I help you with that design you've been aiming for.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="container" id="hire_me">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h3>Need Any Help?</h3>
+            <h4><i class="fa fa-thumbs-up fa-2x"></i> I am available for freelance hire</h4>
+
+            <nav class="cl-effect-2">
+              <a href="#contact_me"><span data-hover="Hire Me">Hire Me</span></a>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid sdm-bg" id="contact_me">
+        <div class="row">
+          <div class="overlay"></div>
+          <div class="col-sm-12 text-center text-capitalize">
+            <h3>Want To Discuss A Project?</h3>
+            <h4>Just Drop A Message Below And I'll Get In Touch</h4>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <section class="col-sm-10 col-sm-offset-1">
+
+            <div class="row text-center">
+              <div class="col-sm-4 col-xs-12">
+                <div class="block">
+                  <a href="mailto:rudy@torres-dev.com"> <i class="fa fa-envelope fa-2x"></i></a>
+                  <a href="mailto:rudy@torres-dev.com"><h4 class="text-uppercase">Email</h4></a>
+                  <ul class="list-unstyled">
+                    <a href="mailto:rudy@torres-dev.com"><li>rudy@torres-dev.com</li></a>
+                  </ul>
+                </div> 
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <div class="block">
+                  <a href="tel:7147919965"> <i class="fa fa-phone fa-2x"></i></a>
+                  <a href="tel:7147919965"><h4 class="text-uppercase">Call</h4></a>
+                  <ul class="list-unstyled">
+                    <a href="tel:7147919965"><li>(714) 791-9965</li></a>
+
+                  </ul>
+
+                </div> 
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <div class="block">
+                  <a href="https://www.google.com/maps/place/Irvine,+CA+92618/@33.6731631,-117.8135979,12z/data=!3m1!4b1!4m5!3m4!1s0x80dcc2ab294505d5:0xc632aac341d153b4!8m2!3d33.665242!4d-117.7490656" target="_blank"><i class="fa fa-home fa-2x"></i></a>
+                  <h4 class="text-uppercase">Located</h4>
+                  <ul class="list-unstyled">
+                    <a href="https://www.google.com/maps/place/Irvine,+CA+92618/@33.6731631,-117.8135979,12z/data=!3m1!4b1!4m5!3m4!1s0x80dcc2ab294505d5:0xc632aac341d153b4!8m2!3d33.665242!4d-117.7490656" target="_blank"><li>Irvine, CA 92618</li></a>
+                  </ul>
+                </div> 
+              </div>
+            </div>
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbyYqt_rNgzHUScx0TxOwnj28vOtndUl1ufOvFymBmGrXc-1gKlc/exec" class="row" id="gform" data-email="placeholder">
+              <div class="col-sm-6 col-xs-12">
+               <div class="form-group">
+                 <label for="your_name">Your Name</label>
+                 <input type="text" class="form-control" id="your_name" placeholder="Full Name" name="name">
+               </div>
+               <div class="form-group">
+                <label for="your_email">Email</label>
+                <input type="email" class="form-control" id="your_email" placeholder="Enter Your Email" name="email">
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label for="your_message">Your Message</label>
+                <textarea class="form-control" rows="5" id="your_message" placeholder="Write Your Message" name="message"></textarea>
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="url"></label>
+                <input type="text" class="preventSpam" id="url" name="url">
+              </div>
+            <div class="col-xm-12 text-center margin-top-55 margin-bottom-55">
+              <button type="submit" value="Send" data-toggle="modal" data-target="" class="btn btn-orange send">Send Message</button>
+            </div>
+          </form>
+
+          <div class="text-center row">
+            <div class="col-sm-12">
+              <ul class="social-networks spin-icon">
+                <li><a href="https://www.facebook.com/masters189" class="icon-facebook" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/rtorres_dev" class="icon-twitter" target="_blank">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/rudy-torres/" class="icon-linkedin" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.pinterest.com/torres_dev/" class="icon-pinterest" target="_blank">Pinterest</a></li>
+                <li><a href="https://www.instagram.com/torresr714/" class="icon-instagram" target="_blank">Instagram</a></li>
+              </ul>
+              <p class="text-center margin-top-30">
+               &copy Copyright 2018 <a href="#"> Rudy Torres</a>
+             </p>
+           </div>
+         </div>
+       </section>
+     </div>
+   </section>
+   <!-- Modal -->
+   <div class="modal fade" id="rejamModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">ReJam Web Application</h4>
+        </div>
+        <div class="modal-body">
+          <a href="https://secret-dusk-70061.herokuapp.com/" target="_blank"><h5 style="color: red">View Project App</h5></a>
+          <p>Music web app that let's you sign in via Spotify. Users can relive their night out at concert they attended or maybe want to see what music an artist played at a venue they missed. ReJam let's you create a playlist in the exact order that an artist performed. Project deadline was 1 week. </p>
+          <img src="images/portfolio/reJam.png" class="img-responsive" alt="">
+        </div>
+        <div class="modal-footer">
+          <h4 style="color: red">Technology Used For This Project</h4>
+          <h6>HTML5 | CSS3 | JavaScript | jQuery | Materialize | Font Awesome | Ionic Framework | Express | JSON | Request | Cookie-Parser | oAuth2 | Tokens | Spotify API | Setlist.fm API | AJAX calls | Heroku.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal fade" id="helpinghandModal" tabindex="-1" role="dialog" aria-labelledby="hhModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="hhModalLabel">Helping Hand Mobile & Web App</h4>
+          </div>
+          <div class="modal-body">
+            <a href="https://hidden-mountain-42950.herokuapp.com/" target="_blank"><h5 style="color: red">View Project App</h5></a>
+            <p>Mobile & web messaging app lets users leave anonymous messages via google maps with a custom drop marker. Project deadline was 1 week.</p>
+            <img src="images/portfolio/HH.jpg" class="img-responsive" alt="">
+          </div>
+          <div class="modal-footer">
+            <h4 style="color: red">Technology Used For This Project</h4>
+            <h6>JavaScript | jQuery | HTML5 | CSS3 | Bootstrap | Font Awesome | Google API | AJAX | Express | Moment | Hasha | Identicon | MySQL | Sequelize | Heroku</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="modal fade" id="crystalModal" tabindex="-1" role="dialog" aria-labelledby="crystalModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="crystalModalLabel">Crystal Collector Game Web App</h4>
+            </div>
+            <div class="modal-body">
+              <a href="https://rudytorres714.github.io/Crystal-Collector/" target="_blank"><h5 style="color: red">View Project App</h5></a>
+              <p>One of my early projects I designed when starting to code. A basic web app game called Crystal Collector. Completion 3 days</p>
+              <img src="images/portfolio/Screen%20Shot%202018-02-07%20at%203.51.52%20PM.png" class="img-responsive" alt="">
+            </div>
+            <div class="modal-footer">
+              <h4 style="color: red">Technology Used For This Project</h4>
+              <h6>HTML5 | CSS3 | Bootstrap | JavaScript | jQuery | GitHub | Terminal</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="psychicModal" tabindex="-1" role="dialog" aria-labelledby="psychicModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="psychicModalLabel">Psychic Guessing Game App Game</h4>
+            </div>
+            <div class="modal-body">
+              <a href="https://rudytorres714.github.io/Psychic-Letter-Game/" target="_blank"><h5 style="color: red">View Project App</h5></a>
+              <p>One of my early projects I designed when first starting to code. A basic web app game. Completion 2-3 days</p>
+              <img src="images/portfolio/psychic.png" class="img-responsive" alt="">
+            </div>
+            <div class="modal-footer">
+              <h4 style="color: red">Technology Used For This Project</h4>
+              <h6>HTML5 | CSS3 | Bootstrap | JavaScript | jQuery | GitHub | Terminal</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="vpModal" tabindex="-1" role="dialog" aria-labelledby="vpModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="vpModalLabel">Vacation Photowall Mobile App</h4>
+            </div>
+            <div class="modal-body">
+              <a href="https://vacationphotos-ab139.firebaseapp.com/" target="_blank"><h5 style="color: red">View React Web Application</h5></a>
+              <p>Web & Mobile Application built in React</p>
+              <img src="images/portfolio/vp.png" class="img-responsive" alt="">
+            </div>
+            <div class="modal-footer">
+              <h4 style="color: red">Technology Used For This Project</h4>
+              <h6>Google Firebase | React | ES6 | Babel | React-Dom | React-Fontawesome | React-Redux | React-Router-Dom | React-Scripts | Redux | Redux-Thunk | Node</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="musicModal" tabindex="-1" role="dialog" aria-labelledby="musicModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="musicModalLabel">Music Trivia Game Web App</h4>
+            </div>
+            <div class="modal-body">
+              <a href="https://rudytorres714.github.io/Music-Trivia-Game/" target="_blank"><h5 style="color: red">View Project App</h5></a>
+              <p>One of my 3rd projects I designed. A basic but fun music video trivia guessing game. Completion 3-4 days</p>
+              <img src="images/portfolio/music-trivia.png" class="img-responsive" alt="">
+            </div>
+            <div class="modal-footer">
+              <h4 style="color: red">Technology Used For This Project</h4>
+              <h6>HTML5 | CSS3 | Bootstrap | JavaScript | jQuery | GitHub | Terminal</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-send" tabindex="-1" role="dialog" aria-labelledby="sendModalLabel">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h3 class="modal-title" id="sendModalLabel">Message Sent Successfully</h3>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Information Received</h4>
+                      <h4>Thanks for contacting me. I will be in touch with you very soon. </h4>
+                  </div>
+                  <div class="modal-footer text-left">
+                      <a class="btn btn-danger" data-dismiss="modal"> Close </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="missing-info" tabindex="-1" role="dialog" aria-labelledby="missing-infoModalLable">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h3 class="modal-title" id="missing-infoModalLable">More Information is Needed</h3>
+                  </div>
+                  <div class="modal-body">
+                      <h4>Please fill out all form fields.</h4>
+                      <h5>Like to email me directly instead? Click email icon on main page.</h5>
+                  </div>
+                  <div class="modal-footer text-left">
+                      <a class="btn btn-danger" data-dismiss="modal"> Close </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="thankyou_message">
+          <h1>Message Sent</h1>
+      </div>
+
+      <!-- Modal end -->
+  <script src="js/main.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.palette-colors a').click(function(e) {
+        e.preventDefault();
+        var newCSSHref = $(this).attr('href');
+        $('#css-main').attr('href', newCSSHref);
+      });
+      // close the palette on click
+      $('.palette-toggle').click(function() {
+        $('.palette-wrapper').toggleClass('palette-closed');
+      });
+    });
+  </script>
+      <script>
+
+          $('.send').click(function (e) {
+              if ($('#your_name').val()=== '' || $('#your_message').val() === '' || $('#your_email').val()=== ''){
+                  $('#missing-info').modal('show');
+                  e.preventDefault();
+              } else if($('#url').val()!== ''){
+                  return false;
+              } else $('#modal-send').modal('show')
+          });
+
+      </script>
+      <script data-cfasync="false" type="text/javascript"
+              src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+</body>
+</html>
